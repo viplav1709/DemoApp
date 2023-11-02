@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import CharacterInfoCard from '../components/CharacterInfoCard.jsx';
 import { Container, Grid, Typography } from '@mui/material';
 import { gql } from '@apollo/client';
-import client from '../pages/apollo-client';
+import {client} from '../utils/apollo-client';
 import Link from 'next/link';
 
 interface character {

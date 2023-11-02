@@ -3,7 +3,7 @@ import ResponsiveAppBar from '../../components/Header';
 import Footer from '../../components/Footer';
 import { Container, Typography } from '@mui/material';
 import styles from '../index.module.css';
-import client from '../apollo-client';
+import {client} from '../../utils/apollo-client';
 import { gql } from '@apollo/client';
 
 function CharacterDetails({char}) {
