@@ -8,14 +8,16 @@ import client from '../pages/apollo-client';
 import Link from 'next/link';
 
 interface character {
-  id: number;
-  name: string;
-  count: number;
-  image: string;
+  results: {
+    id: number;
+    name: string;
+    count: number;
+    image: string;
+  }[];
 }
 
 type CharacterType = {
-  characters: character[];
+  characters: character;
 };
 
 const Home: FC<CharacterType> = ({ characters }) => {

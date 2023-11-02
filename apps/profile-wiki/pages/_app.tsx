@@ -10,7 +10,13 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Users Directory</title>
       </Head>
       <main className="app">
-        <ClerkProvider {...pageProps}>
+        <ClerkProvider
+          {...pageProps}
+          navigate={(to) => {
+            window.location.href = to;
+          }}
+          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+        >
           <Component {...pageProps} />
         </ClerkProvider>
       </main>
